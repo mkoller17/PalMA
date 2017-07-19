@@ -1252,7 +1252,6 @@ pollDatabase();
   var _paq = _paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setCookieDomain", "*.lc02.bib.uni-mannheim.de"]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
