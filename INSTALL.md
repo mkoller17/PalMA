@@ -7,7 +7,7 @@ Operating system
 The PalMA web application requires a web server (usually Apache 2) which
 supports PHP 5 and SQLite.
 
-User provided contents are shown using a simple web browser (dwb),
+User provided contents are shown using a simple web browser (midori or dwb),
 an image viewer (eog, will be replaced by feh),
 a video player (vlc) and an office suite (libreoffice).
 
@@ -21,9 +21,10 @@ commands must be run as root user):
     apt-get install openbox php5-curl php5-gd php5-intl php5-sqlite
     apt-get install ssvnc sqlite3 vlc wmctrl xdotool zathura
 
-Debian GNU Linux Stretch uses PHP7.0. It needs these packages:
+Debian GNU Linux Stretch uses PHP7.0 and includes the web browser midori
+which works better than dwb, so these packages are needed:
 
-    apt-get install apache2 dwb eog feh libapache2-mod-php7.0 libjs-jquery
+    apt-get install apache2 eog feh libapache2-mod-php7.0 libjs-jquery midori
     apt-get install openbox php7.0-curl php7.0-gd php7.0-intl php7.0-mbstring php7.0-sqlite
     apt-get install ssvnc sqlite3 vlc wmctrl xdotool zathura
 

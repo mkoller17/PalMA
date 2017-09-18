@@ -634,6 +634,20 @@ function getHandlerCommand(handle, task) {
     handler["libreoffice-writer"]["zoomout"] = "undefined";
     handler["libreoffice-writer"]["download"] = "download";
 
+    // Handler for web pages.
+    handler["midori"] = {};
+    handler["midori"]["up"] = "Up";
+    handler["midori"]["down"] = "Down";
+    handler["midori"]["left"] = "Left";
+    handler["midori"]["right"] = "Right";
+    handler["midori"]["next"] = "Next";
+    handler["midori"]["prior"] = "Prior";
+    handler["midori"]["home"] = "Home";
+    handler["midori"]["end"] = "End";
+    handler["midori"]["zoomin"] = "plus";
+    handler["midori"]["zoomout"] = "minus";
+    handler["midori"]["download"] = "download";
+
     // Handler for videos.
     handler["vlc"] = {};
     handler["vlc"]["up"] = "undefined";
@@ -946,6 +960,8 @@ function updateControlsBySection(window) {
                 }
         } else if (handler.indexOf("dwb") > -1) {
             control = ["dwb", true, true, true, true, true, true, true, true, true, true, true];
+        } else if (handler.indexOf("midori") > -1) {
+            control = ["midori", true, true, true, true, true, true, true, true, true, true, true];
         } else if (handler.indexOf("vlc") > -1) {
             control = ["vlc", false, false, false, true, false, false, false, false, false, false, false];
         } else if (handler.indexOf("vnc") > -1) {

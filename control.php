@@ -483,6 +483,7 @@ function processRequests($db)
         $dt = new DateTime();
         $date = $dt->format('Y-m-d H:i:s');
 
+        # Open a URL either with midori (preferred) or with dwb.
         $window = array(
             "id" => "",
             "win_id" => "",
@@ -490,7 +491,9 @@ function processRequests($db)
             "state" => "",
             "file" => $openURL,
             // "handler" => "iceweasel --new-window",
-            "handler" => "/usr/bin/nohup /usr/bin/dwb",
+            "handler" => file_exists("/usr/bin/midori")
+                         ? "/usr/bin/nohup /usr/bin/midori -e show-navigationbar=false -a"
+                         : "/usr/bin/nohup /usr/bin/dwb",
             "userid" => "",
             "date" => $date
         );
