@@ -13,12 +13,18 @@ a video player (vlc) and an office suite (libreoffice).
 
 PalMA controls running viewers using wmctrl and xdotool.
 
-So a complete PalMA installation can be based on Debian GNU Linux (Jessie).
+So a complete PalMA installation can be based on Debian GNU Linux Jessie.
 Just add some required Debian packages (these and all other installation
 commands must be run as root user):
 
     apt-get install apache2 dwb eog feh libapache2-mod-php5 libjs-jquery
     apt-get install openbox php5-curl php5-gd php5-intl php5-sqlite
+    apt-get install ssvnc sqlite3 vlc wmctrl xdotool zathura
+
+Debian GNU Linux Stretch uses PHP7.0. It needs these packages:
+
+    apt-get install apache2 dwb eog feh libapache2-mod-php7.0 libjs-jquery
+    apt-get install openbox php7.0-curl php7.0-gd php7.0-intl php7.0-mbstring php7.0-sqlite
     apt-get install ssvnc sqlite3 vlc wmctrl xdotool zathura
 
 Some more packages are optional:
